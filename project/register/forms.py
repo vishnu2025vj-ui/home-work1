@@ -5,7 +5,7 @@ class RegistrationForm(forms.Form):
         label="Full Name",
         min_length=5,
         max_length=50,
-        widget=forms.TextInput(attrs={'placeholder': 'Enter full name'})
+        widget=forms.TextInput(attrs={'placeholder': ' full Enter  name'})
     )
     email = forms.EmailField(
         label="Email",

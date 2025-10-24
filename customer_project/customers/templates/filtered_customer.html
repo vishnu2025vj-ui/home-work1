@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Customers</title>
+</head>
+<body>
+    <h2>Customers with @example.com Email</h2>
+    <ul>
+        {% for c in customers %}
+            <li>{{ c.name }} — {{ c.email }}</li>
+        {% empty %}
+            <li>No customers found with @example.com email.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_customer' %}">Add New Customer</a> |
+    <a href="{% url 'all_customers' %}">All Customers</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Customers</title>
+</head>
+<body>
+    <h2>Customers with @example.com Email</h2>
+    <ul>
+        {% for c in customers %}
+            <li>{{ c.name }} — {{ c.email }}</li>
+        {% empty %}
+            <li>No customers with @example.com found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_customer' %}">Add New Customer</a> |
+    <a href="{% url 'all_customers' %}">All Customers</a>
+</body>
+</html>
